@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'imc-calculator';
+  weight: number = 0;
+  height: number = 0;
+  bmi: number = 0;
+  constructor() { }
+
+  calculateBmi(): void {
+    this.bmi = this.weight / (this.height * this.height);
+  }
 }
